@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh; 
+    color: #333;
+    overflow-x: hidden;
+}
+
+header.events-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+header .logo img {
+    width: 150px; 
+    height: auto;
+}
+
+header .register-button {
+    padding: 10px 20px;
+}
+
+header .register-link {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+header .register-link:hover {
+    background-color: #0056b3; 
+}
+
+.events-section {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.events-section h1 {
+    font-size: 36px;
+    color: #007bff; 
+    margin-bottom: 20px;
+}
+
+.events-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.event {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.event h2 {
+    font-size: 28px;
+    color: #28a745; 
+    margin-bottom: 10px;
+}
+
+.event p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .events-section {
+        padding: 30px;
+    }
+
+    header .logo img {
+        width: 120px; 
+    }
+
+    header .register-link {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .events-section h1 {
+        font-size: 28px;
+    }
+
+    .event h2 {
+        font-size: 24px;
+    }
+
+    .event p {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRM AP Event Registration</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+
+<div class="registration-container">
+    <div class="registration-form">
+        <h2>SRM AP Event Registration</h2>
+        <form action="register.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="event">Select Event</label>
+                <select id="event" name="event" required>
+                    <option value="Select">Select Event</option>
+                    <option value="Aloha">Aloha (Freshers' Day)</option>
+                    <option value="Paridhan">Paridhan (Ethnic Day)</option>
+                    <option value="Infinitus">Infinitus (Cultural Fest)</option>
+                    <option value="Udgam">Udgam (Sports Fest)</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+    </div>
+</div>
+
+<script>
+
+function generateRegistrationNumber(event) {
+    event.preventDefault(); 
+    let currentRegistrationNumber = localStorage.getItem('currentRegistrationNumber');
+    
+    if (!currentRegistrationNumber) {
+        currentRegistrationNumber = 'AP10000'; 
+    } else {
+        let numericPart = parseInt(currentRegistrationNumber.substring(2)); 
+        numericPart++; 
+        currentRegistrationNumber = 'AP' + String(numericPart).padStart(5, '0'); 
+    }
+
+    localStorage.setItem('currentRegistrationNumber', currentRegistrationNumber);
+
+    localStorage.setItem('registrationNumber', currentRegistrationNumber);
+
+    window.location.href = 'success.html';
+}
+</script>
+
+</body>
+</html>
