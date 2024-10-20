@@ -1,7 +1,3 @@
-Here's the `README.md` for your project:
-
----
-
 # Event Registration 
 
 This is a web-based event management system developed for SRM University-AP. The system allows users to register for various university events through a simple and intuitive interface. It includes a registration form and backend integration for managing event sign-ups and participant data storage.
